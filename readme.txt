@@ -13,7 +13,7 @@ Hide the COD paiemant for a list of choosen cities
 
 == Description ==
 
-Hide the COD paiemant for a list of choosen cities
+hide cash on delivery for selected delivery addresses
 
 
 = Requirements for the plugin to work =
