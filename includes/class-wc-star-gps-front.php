@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
-if (!class_exists('WC_Ali_Front')) {
+if (!class_exists('WC_Star_Gps_Front')) {
 
     class WC_Star_Gps_Front {
 
