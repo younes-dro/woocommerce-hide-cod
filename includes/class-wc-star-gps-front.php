@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
 if (!class_exists('WC_Star_Gps_Front')) {
 
     class WC_Star_Gps_Front {
-
+        
         public $villes = array();
 
         public function __construct() {
@@ -18,25 +18,26 @@ if (!class_exists('WC_Star_Gps_Front')) {
             add_action('wp_enqueue_scripts', array($this, 'dro_enqueue_script'));
             add_action('wp_enqueue_scripts', array($this, 'getCities'));
             add_filter('woocommerce_checkout_fields', array($this, 'change_city_to_dropdown'));
-            add_filter('woocommerce_available_payment_gateways', array($this, 'payment_gateway_disable_country'));
+            add_filter( 'woocommerce_available_payment_gateways', array ( $this, 'payment_gateway_disable_country' ) );            
         }
+        
+        public function payment_gateway_disable_country( $available_gateways ){
 
-        public function payment_gateway_disable_country($available_gateways) {
-//            var_dump(WC()->customer->get_billing_city());
-            $listAccpectedCities = array(1, 93, 94, 136, 221, 215);
-            if (isset($available_gateways['cod']) && !in_array(WC()->customer->get_billing_city(), $listAccpectedCities)) {
-                unset($available_gateways['cod']);
+            $listAccpectedCities = array (1, 93 , 94 , 136 , 221 , 215);
+            if ( isset( $available_gateways['cod'] ) &&  !in_array ( WC()->customer->get_billing_city() , $listAccpectedCities )  ) {
+                unset(  $available_gateways['cod'] );
             }
-
-            return $available_gateways;
+            
+            return $available_gateways;            
         }
 
         public function change_city_to_dropdown($fields) {
-
+            
             $options = array();
-            foreach ($this->villes->ville as $key => $value) {
-
+            foreach ( $this->villes->ville as $key => $value) {
+                
                 $options[] = $value->ville;
+                
             }
             sort($options);
             $city_args = wp_parse_args(array(
@@ -69,8 +70,9 @@ if (!class_exists('WC_Star_Gps_Front')) {
             }
             $body = wp_remote_retrieve_body($request);
             $data = json_decode($body);
-
+            
             return $this->villes = $data;
+
         }
 
         public function dro_enqueue_script() {
