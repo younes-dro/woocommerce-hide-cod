@@ -78,7 +78,7 @@ if (!class_exists('WC_Star_Gps_Front')) {
         public function dro_enqueue_script() {
             
             if ( is_woocommerce()  || is_cart() || is_checkout () ){
-                wp_enqueue_style( 'stargps' , WC_Star_Gps()->plugin_url() . '/assets/css/stargps.css' , array() , '20210626' );
+                wp_enqueue_style( 'stargps' , WC_Star_Gps()->plugin_url() . '/assets/css/hide-devis-button.css' , array() , '20210626' );
             }
             
             return;
