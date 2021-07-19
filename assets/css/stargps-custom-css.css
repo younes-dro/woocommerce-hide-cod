@@ -1,0 +1,23 @@
+/**
+* 
+* Custom CSS Overriding Betheme css
+*
+*/
+
+@media screen and (max-width : 767px){
+    footer#Footer  div.widgets_wrapper  div.container div.column  aside  ul {
+        list-style: none outside;
+        padding-left: 10px;
+        padding-top: 10px; 
+        padding-bottom: 10px;
+   
+    }
+
+    footer#Footer  div.widgets_wrapper  div.container div.column  aside  ul > li > a{
+
+        display: block;
+        padding-bottom: 20px;
+        font-size: 1rem;
+
+    }
+}

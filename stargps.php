@@ -7,7 +7,7 @@
  * Author URI:      https://github.com/younes-dro
  * Text Domain:     stargps
  * Domain Path:     /languages
- * Version:         1.0.0
+ * Version:         1.1.0
  *
  * @package         Stargps
  * 
@@ -339,6 +339,10 @@ function WC_Star_Gps(){
     WC_Star_Gps::register_autoloader();
     return WC_Star_Gps::start( new WC_Star_Gps_Dependencies() );
     
+}
+    if ( defined( 'DOING_AJAX' ) && DOING_AJAX && isset( $_POST['action'] ) && $_POST['action'] === 'get-tagcloud' )
+        unset( $args['number'] );
+    return $args;
 }
 
 WC_Star_Gps();
