@@ -1,39 +1,24 @@
-# Custom WooCommerce Plugin: Hide COD Payment Option
+# [DEPRECATED] WooCommerce Plugin: Hide COD Payment Option by City
 
-This custom WooCommerce plugin allows you to hide the Cash on Delivery (COD) payment option for specific cities in Morocco. Enhance your WooCommerce store's functionality by controlling payment methods based on geographic location.
+🚨 **This repository has been archived and is no longer maintained.**  
+The plugin has been moved to a new repository with a broader scope and improved features.
 
-## Features
+👉 **Please visit the new repository here:**  
+🔗 [https://github.com/younes-dro/woo-cod-restrictions](https://github.com/younes-dro/woo-cod-restrictions)
 
-- **Geographic Restrictions**: Specify cities where the COD payment method should be hidden.
-- **Easy Configuration**: Simple settings interface to manage the cities effectively.
-- **Seamless Integration**: Works smoothly with your existing WooCommerce setup.
+---
 
-## Installation
+## Why the Move?
 
-1. Download the plugin from [GitHub](https://github.com/younes-dro/woocommerce-hide-cod).
-2. Upload the `woocommerce-hide-cod` folder to the `/wp-content/plugins/` directory.
-3. Activate the plugin through the 'Plugins' menu in WordPress.
-4. Configure the settings to specify the cities where you want to hide the COD option.
+This plugin was originally created to hide the **Cash on Delivery (COD)** payment option for specific cities in Morocco. It has now evolved into a more flexible and global solution that supports:
 
-## Usage
+- City-based restrictions (worldwide)
+- Country-based exclusions
+- Order total conditions
+- And more to come...
 
-1. Go to **WooCommerce > Settings > Payments**.
-2. Find the **Hide COD** settings section.
-3. Add the cities for which you want to hide the COD payment option.
-4. Save the settings.
+Please update your bookmarks and report any new issues or suggestions on the new repository.
 
-## See It in Action
+---
 
-For a live demonstration, visit [stargps.ma](https://stargps.ma).
-
-## Contributing
-
-Contributions are welcome! Please feel free to open issues or submit pull requests.
-
-## License
-
-This plugin is licensed under the [MIT License](LICENSE).
-
-## Support
-
-For any questions or support requests, please open an issue on the [GitHub repository](https://github.com/younes-dro/woocommerce-hide-cod/issues).
+Thank you for your support!
